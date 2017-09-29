@@ -1,0 +1,56 @@
+// Variables
+$colorSeparator: #ccc;
+$colorBtnBase: #284BCD;
+$colorPositive: #29762B;
+$colorNegative: #C70000;
+$spacing: 15px;
+$imageWidth: 300px;
+$imageWidth-M: 200px;
+
+@mixin breakpoint($_pointName) {
+    @if $_pointName == XXS {
+        @media only screen and (max-width: 319px) { @content; }
+    }
+    @elseif $_pointName == XS {
+        @media only screen and (min-width: 320px) { @content; }
+    }
+    @elseif $_pointName == S {
+        @media only screen and (min-width: 480px) { @content; }
+    }
+    @elseif $_pointName == min-M {
+        @media only screen and (max-width: 768px) { @content; }
+    }
+    @elseif $_pointName == min-M_p {
+        @media only screen and (max-width: 768px) and (orientation: portrait) { @content; }
+    }
+    @elseif $_pointName == min-M_l {
+        @media only screen and (max-width: 768px) and (orientation: landscape) { @content; }
+    }
+    @elseif $_pointName == M {
+        @media only screen and (min-width: 769px) { @content; }
+    }
+    @elseif $_pointName == M_l {
+        @media only screen and (min-width: 769px) and (orientation: landscape) { @content; }
+    }
+    @elseif $_pointName == min-L {
+        @media only screen and (max-width: 991px) { @content; }
+    }
+    @elseif $_pointName == L {
+        @media only screen and (min-width: 992px) { @content; }
+    }
+    @elseif $_pointName == min-XL {
+        @media only screen and (max-width: 1199px) { @content; }
+    }
+    @elseif $_pointName == XL {
+        @media only screen and (min-width: 1200px) { @content; }
+    }
+    @elseif $_pointName == XXL {
+        @media only screen and (min-width: 1400px) { @content; }
+    }
+    @elseif $_pointName == _l {
+        @media only screen and (orientation: landscape) { @content; }
+    }
+    @elseif $_pointName == _p {
+        @media only screen and (orientation: portrait) { @content; }
+    }
+}

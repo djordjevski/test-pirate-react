@@ -1,0 +1,22 @@
+@import "_mixinsAndVariables.scss";
+
+.hotel-search {
+    margin: 0 auto;
+    @include breakpoint(min-L) {
+        width: 95%;        
+    }
+    @include breakpoint(L) {
+        width: 950px;
+    } 
+
+    @at-root .load-btn-host {
+        padding: $spacing*2 0;
+        text-align: center;
+
+        .btn {
+            @include breakpoint(_p) {
+                width: 100%;
+            }
+        }
+    }
+}

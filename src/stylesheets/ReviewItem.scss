@@ -1,0 +1,51 @@
+@import "_mixinsAndVariables.scss";
+
+.review {
+    display: flex;
+    align-items: baseline;
+    padding: $spacing 0;
+    + .review {
+        border-top: 1px solid $colorSeparator;        
+    }
+
+    @at-root .review__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        color: #fff;
+    }
+
+    @at-root .review__content {
+        flex: 1;
+        padding-left: $spacing; 
+        @at-root .review__name {
+            margin-bottom: $spacing*0.5;
+        }
+        @at-root .review__comment {
+            font-size: 0.8em;
+            line-height: 1.15;
+        }
+    }
+
+    @at-root #{&}--positive {
+        .review__icon {
+            background: $colorPositive;
+        }
+        .review__name {
+            color: $colorPositive;
+        }
+    }
+
+    @at-root #{&}--negative {
+        .review__icon {
+            background: $colorNegative;
+        }
+        .review__name {
+            color: $colorNegative;
+        }
+    }
+}
+// .review

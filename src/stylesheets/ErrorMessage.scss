@@ -1,0 +1,22 @@
+@import "_mixinsAndVariables.scss";
+
+.error-message {
+    padding: $spacing*3 $spacing;
+    border: 1px solid $colorNegative;
+    background: linear-gradient(to bottom, #eee, #fff);
+    
+    @at-root .error-message__content {
+        text-align: center;
+        font-size: 32px;
+
+        @at-root .error-message__icon {
+            display: inline-block;
+            margin-bottom: $spacing; 
+            font-size: 2em;
+            color: $colorNegative;
+        }
+        @at-root .error-message__text {
+            display: block;
+        }
+    }
+}

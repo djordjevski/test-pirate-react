@@ -1,0 +1,5 @@
+.stars {
+    @at-root .stars__text   { display: none; }
+    @at-root .star__full    { color: #fb0; }
+    @at-root .star__blank   { color: #ccc; }
+}
